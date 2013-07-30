@@ -24,7 +24,7 @@ module PayzaPayments
     private
 
     def validate_ipn(token)
-      if self.sandbox?
+      if PayzaPayments.sandbox?
         send_ipn_validation(token, SANDBOX_IPN)
       else
         send_ipn_validation(token, PRODUCTION_IPN)
