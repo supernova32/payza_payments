@@ -57,7 +57,7 @@ def pay_item_with_payza
     # in order to be able to get the button in your view with the correct
     # parameters.
     @payza = PayzaPayments::ButtonGenerator.new PAYZA_CONFIG
-    @item = Item.find(params[:id])
+    @invoice = Invoice.new(params[:invoice])
 end
 ```
 
@@ -74,9 +74,10 @@ There are two methods for generating buttons. `.generate_simple_button` and
 # period_length: gives how long the subscription will be, depending on time_unit
 # it can go from 1 to 90.
 .generate_subscription_button(action, purchase_type, item_name, amount, currency,
-                              return_url, cancel_url, item_description, order_id, time_unit, period_length)
+                              return_url, cancel_url, item_description, order_id,
+                              time_unit, period_length)
 ```
-
+The code in the view may look like this (Haml example)
 ```haml
 = @payza.generate_simple_button(self, :item, 'Sample item', 5, 'EUR', 'http://exa.co/success',
                                 'http://exa.co/cancel', 'Sample Desc', @invoice.id)
