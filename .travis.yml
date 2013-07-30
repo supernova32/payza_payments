@@ -1,5 +1,5 @@
 language: ruby
 rvm:
   - 2.0.0
-before_script: bundle exec rake db:migrate && bundle exec rake db:setup
-script: cd ./test/dummy/ && rake spec
+before_script: cd ./test/dummy/ && bundle install && bundle exec rake db:migrate
+script: cd ./test/dummy/ && bundle exec rake spec

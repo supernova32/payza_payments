@@ -30,7 +30,7 @@ gem 'shoulda-matchers'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
-gem 'payza_payments', path: '../../'
+gem 'payza_payments', git: 'git@github.com:supernova32/payza_payments.git'
 gem 'haml-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
