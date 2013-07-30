@@ -1,0 +1,14 @@
+development:
+  ipn_security_code: U1234567
+  merchant_email: support@freedomvpn.info
+  sandbox: true
+
+production:
+  ipn_security_code: U1234567
+  merchant_email: support@freedomvpn.info
+  sandbox: false
+
+test:
+  ipn_security_code: U1234567
+  merchant_email: support@freedomvpn.info
+  sandbox: false
