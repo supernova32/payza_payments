@@ -1,6 +1,8 @@
 Dummy::Application.routes.draw do
 
   root 'dummy#index'
+
+  post '/ipn_notify' => 'dummy#ipn_notification', as: 'ipn_notify'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

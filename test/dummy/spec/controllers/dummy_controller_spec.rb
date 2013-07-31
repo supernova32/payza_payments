@@ -40,4 +40,12 @@ describe DummyController do
       response.body.should have_xpath './/input[@name="ap_image"]'
     end
   end
+
+  context 'post an ipn request' do
+    before { post :ipn_notification, { token: 'jkfhaugf9wuflegfbasf=='} }
+    it { should respond_with :success }
+    it 'should be an invalid token' do
+      assigns(:response).should == 'INVALID REQUEST'
+    end
+  end
 end
