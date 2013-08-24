@@ -1,5 +1,6 @@
 # PayzaPayments
 [![Build Status](https://travis-ci.org/supernova32/payza_payments.png?branch=master)](https://travis-ci.org/supernova32/payza_payments)
+[![Gem Version](https://badge.fury.io/rb/payza_payments.png)](http://badge.fury.io/rb/payza_payments)
 
 Configure buttons for Payza based on your requirements and validate IPN requests sent by Payza.
 With this gem the user of your shop can pay for a digital item (or any type of item) and you can validate the transaction
